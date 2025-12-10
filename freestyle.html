@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>freestyle</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    
+    <style>
+    body {
+      margin:0;
+      font-family:Roboto, Arial;
+    }
+    a {
+      text-decoration:none;
+      color:inherit;
+    }
+      .head-text span {
+        text-decoration:line-through;
+        opacity:0.7;
+      }
+      .first-text {
+        color:white;
+        margin:0;
+        margin-bottom:30px;
+        width:200px;
+      }
+      .head-text {
+       color:white;
+       width:200px;
+       font-size:35px;
+       font-weight:bold;
+       margin:0;
+      }
+      .general-div {
+        width:350px;
+        height:420px;
+        margin-top:50px;
+        border-radius:20px;
+        border:none;
+        overflow:hidden;
+      }
+      .download-div,
+      .seat-reserve {
+        color:white;
+        font-size:15px;
+        font-weight:bold;
+        background:#3A10E5;
+        padding:10px 20px;
+        border-radius:5px;
+        cursor:pointer;
+        margin-top:13px;
+        display:flex;
+        align-items:center;
+        justify-content:center;
+      }
+      .download-div {
+        background:#10162F;
+      }
+      .memo{
+        border-bottom:2px solid black;
+        display:flex;
+        flex-direction:column;
+        justify-content:space-between;
+        background:#3A10E5;
+        padding:25px;
+      }
+      .demo {
+        display:flex;
+        flex-direction:column;
+        justify-content:space-between;
+        background:#FFF0E5;
+        padding-top:30px;
+        padding-left:25px;
+        padding-right:25px;
+        padding-bottom:40px;
+      }
+      .nov-div {
+        margin-bottom:15px;
+        font-weight:500;
+        line-height:25px;
+      }
+      .img-div {
+        width:65px;
+        border-radius:35px;
+        border:2px solid white;
+        margin-right:12px;
+      }
+      .div-ray {
+        display:flex;
+        align-items:center;
+      }
+      .background {
+        background:#10142F;
+        padding-bottom:80px;
+        padding-top:70px;
+        padding-left:35px;
+        padding-right:35px;
+        border-bottom:2px solid white;
+      }
+      .cto-text {
+        color:white;
+        font-size:16px;
+      }
+      .textby-ray {
+        color:white;
+        font-size:18px;
+        font-weight:500;
+        margin-bottom:8px;
+      }
+      .down-div {
+        background:#3A10E5;
+        padding-top:80px;
+        padding-bottom:40px;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        border-bottom:2px solid white;
+      }
+      .div12,
+      .div-12 {
+        display:flex;
+        flex-direction:column;
+        justify-content:space-between;
+        align-items:center;
+        text-align:center;
+        width:150px;
+        height:100px;
+        margin-bottom:40px;
+      }
+      .div12 div,
+      .div-12 div {
+        color:white;
+      }
+      .div-12 {
+        margin-top:10px;
+      }
+      .no2 {
+        color: white;
+        font-weight:bold;
+        font-size:40px;
+      }
+      .full-text {
+        color:white;
+        line-height:25px;
+        margin-bottom:30px;
+        margin-top:20px;
+      }
+      .ai-text{
+        color:white;
+        width:280px;
+        font-size:45px;
+        margin:0;
+      }
+      .pro-a {
+        display:flex;
+        align-items:center;
+        font-size:15px;
+        font-weight:bold;
+        background:white;
+        padding:2px 8px;
+        width:180px;
+        border-radius:15px;
+        margin-bottom:20px;
+      }
+      .img {
+        width:20px;
+        margin-right:5px;
+      }
+      .icon-img {
+        width:60px;
+        margin-bottom:15px;
+      }
+      .icon-img2 {
+        width:70px;
+        margin-bottom:10px;
+      }
+      .icon-section {
+        background:#10142F;
+        padding:30px 20px;
+        display:flex;
+        flex-direction:column;
+      }
+      .wa-div {
+        background:#25D366;
+        height:60px;
+        width:60px;
+        border-radius:100%;
+        position:fixed;
+        right:20px;
+        bottom:20px;
+        display:flex;
+        align-items:center;
+        justify-content:center;
+      }
+      .wa-img {
+        width:55px;
+      }
+      .wa-div:hover .notification {
+        opacity:0;
+      }
+      .notification {
+        position:absolute;
+        top:-2px;
+        right:0;
+        background:#ff0000;
+        border-radius:100%;
+        padding:2px 6px;
+        color: white;
+        font-weight:500;
+        font-size:13px;
+      }
+      .wa-container {
+        position:relative;
+      }
+      .chat-text {
+        background: white;
+        white-space:nowrap;
+        border-radius:25px;
+        font-size:14px;
+        font-weight:500;
+        padding:10px 20px;
+        box-shadow:3px 4px rgb(25,211,66);
+        cursor:pointer;
+      }
+      .wa-div:hover .chat-div {
+        opacity:1;
+      }
+      .chat-div {
+        opacity:0;
+        display:flex;
+        align-items: center;
+        position:absolute;
+        top:-45px;
+        left:-110px;
+      }
+      .x-div {
+        margin-left:10px;
+        background:black;
+        border-radius:100%;
+        padding:3px 6px;
+        color: white;
+        font-weight:bold;
+        font-size:12px;
+      }
+      .upward-title {
+        background:#10142F;
+        border-bottom:2px solid white;
+        padding:40px;
+        color:white;
+        display:flex;
+        align-items:center;
+        font-size:20px;
+      }
+      .techtxt {
+        margin-left:3px;
+        width:43px;
+        padding-left:3px;
+        border:2.5px solid white;
+        border-radius:100px;
+      }
+      .funtxt {
+        text-decoration:overline;
+        font-weight:500;
+      }
+      .icons-img {
+        width:30px;
+        margin-right:5px;
+      }
+      .git-img {
+        width:40px;
+      }
+      .icons-div-img {
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        margin-bottom:10px;
+      }
+      .social {
+        color:white;
+        font-size:14px;
+        font-weight:bold;
+        text-align:center;
+      }
+      .gmail-txt {
+        text-align:center;
+        color:white;
+        font-weight:500;
+        margin-bottom:25px;
+      }
+      .footer {
+        border-top:1px solid rgba(96,96,96,0.3);
+        color:rgba(96,96,96,0.7);
+        text-align:center;
+        padding:20px;
+      }
+    </style>
+  </head>
+  <body>
+    
+    <div class="wa-div">
+      <img class="wa-img" src="/whatsapp.png">
+      <div class="notification">1</div>
+      
+      <div class="chat-div">
+        <a href="https://whatsapp.com/channel/0029VakAMMeInlqLwoCKvi35" target="_blank">
+          <div class="chat-text">Chat with us</div>
+        </a>
+      <div class="x-div">x</div>
+      </div>
+    </div>
+    
+    <div class="upward-title">
+      <div class="funtxt">Fun</div>
+      <div class="techtxt">tech</div>
+    </div>
+    
+    <div class="background">
+      <nav class="pro-a">
+        <img class="img" src="/funhub.png" alt="logo">
+        <div>Includes Pro access</div>
+      </nav>
+      
+      <h1 class="ai-text">Building Web Application for Beginners bootcamp</h1>
+      
+      <p class="full-text"> <strong>Unlock Your Future in the Age of Tech</strong> <br>
+       Advance Your Skills With Our 2-Week Web Development Online Class.
+       Gain practical, job-ready web development skills through our structured online program. Designed for beginners and aspiring developers, this bootcamp covers the core foundations of modern web development including HTML, CSS, JavaScript, and essential project-building techniques.</p>
+      
+      <nav class="div-ray">
+       <div> <img class="img-div" src="/rakid.jpg" alt="profile pic">
+       </div>
+       <div class="ray1">
+         <div class="textby-ray">Heis Rakid</div>
+         <div class="cto-text">CEO of Funtech, Web <br> & Bot Developer</div> 
+       </div>
+      </nav>
+    
+     <section class="general-div">
+       <div class="memo">
+        <p class="first-text">Join <strong>EARLY18</strong> & get 20% off (offer extended)</p>
+        <h1 class="head-text">Register for $3 <span>$10</span></h1>
+       </div>
+      
+       <div class="demo">
+         <div class="nov-div">Starts January 29, 2026 | 3 sessions per week</div>
+         
+         <a href="https://wa.link/f1czdq" target="_blank">
+         <div class="seat-reserve">Reserve your space now</div>
+         </a>
+         
+         <a href="https://whatsapp.com/channel/0029VakAMMeInlqLwoCKvi35" target="_blank">
+         <div class="download-div">Join our Channel</div></a>
+       </div>
+     </section>
+   </div>
+   
+   <div class="down-div">
+     <div class="div12">
+       <div class="no2">2</div>
+       <div>WEEKS OF LIVE VIRTUAL SESSIONS</div>
+     </div>
+     
+     <div class="div12">
+       <div>
+         <img class="icon-img" src="/verification-badge.png">
+       </div>
+       <div>EXPERT CARRIER GUIDANCE</div>
+     </div>
+
+     <div class="div-12">
+       <div class="no2">3+</div>
+       <div>PORTFOLIO READY PROJECTS</div>
+     </div>
+
+     <div class="div12">
+       <div>
+         <img class="icon-img2" src="/star-icon.png">
+       </div>
+       <div>ACCESS TO FUNTECH UPDATES </div>
+     </div>
+    
+   </div>
+   <div class="icon-section">
+     
+     <p class="social">CONTACT</p>
+     
+     <div class="icons-div-img">
+     <img class="icons-img" src="/facebook.png">
+     <img class="icons-img" src="/wa-icon.png">
+     <img class="icons-img" src="/ig.png">
+     <img class="icons-img" src="/tg.png">
+     <img class="git-img" src="/git-icon.png">
+     </div>
+     
+     <a href="mailto:rakidbiks@gmail.com">
+     <p class="gmail-txt">rakidbiks@gmail.com</p></a>
+     
+     <div class="footer">&copy; 2025 Funtech. All right reserved.</div>
+   </div>
+  </body>
+</html>
